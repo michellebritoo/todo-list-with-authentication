@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="text_input_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/sixty_value</item>
+        <item name="android:layout_margin">@dimen/sixty_value</item>
+        <item name="hintTextColor">@color/black</item>
+    </style>
+
+    <style name="text_input_edit_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">@dimen/eight_value</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="edit_text">
+        <item name="android:layout_margin">@dimen/ten_value</item>
+        <item name="android:drawablePadding">@dimen/twenty_value</item>
+        <item name="android:padding">@dimen/twenty_value</item>
+        <item name="android:background">@color/opaque_white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+</resources>

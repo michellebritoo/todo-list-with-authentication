@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="hundred_value">100dp</dimen>
+    <dimen name="sixty_value">60dp</dimen>
+    <dimen name="twenty_value">20dp</dimen>
+    <dimen name="sixteen_value">16dp</dimen>
+    <dimen name="ten_value">10dp</dimen>
+    <dimen name="eight_value">8dp</dimen>
+    <dimen name="two_hundred_value">200dp</dimen>
+
 </resources>
