@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import br.com.michellebrito.todoauthentication.R
@@ -21,13 +22,14 @@ class LoginFragment : Fragment() {
     ): View {
         binding = LoginFragmentBinding.inflate(layoutInflater, container, false)
 
-        setupListeners()
+        setupViewListeners()
         subscribeViewModelEvents()
 
         return binding.root
     }
 
-    private fun setupListeners() {
+    private fun setupViewListeners() {
+        observeInputs()
         login()
     }
 
@@ -39,11 +41,20 @@ class LoginFragment : Fragment() {
         }
     }
 
+    private fun observeInputs() = with(binding) {
+        ETemail.doAfterTextChanged { viewModel.onEmailTextChanged(it) }
+        ETpassword.doAfterTextChanged { viewModel.onPasswordTextChanged(it) }
+    }
+
     private fun subscribeViewModelEvents() {
         viewModel.loginSuccess.observe(viewLifecycleOwner) { success ->
             if (success) {
                 Log.i("login success", success.toString())
             } else setErrorOnEditText()
+        }
+
+        viewModel.enableButton.observe(viewLifecycleOwner) { isEnabledForm ->
+            binding.BTNLogin.isEnabled = isEnabledForm
         }
     }
 
