@@ -3,4 +3,6 @@
     <string name="hint_email">Email</string>
     <string name="hint_password">Senha</string>
     <string name="login_text">Entrar</string>
+    <string name="email_error">Confira se o email está correto</string>
+    <string name="password_error">Confira se a senha está correta</string>
 </resources>

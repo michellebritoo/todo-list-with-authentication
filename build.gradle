@@ -9,6 +9,10 @@ buildscript {
         nav_version = '2.5.0'
         legacy_suport_version = '1.0.0'
         lottie_version = '5.2.0'
+        koin_version = '2.0.1'
+    }
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.3'
     }
 }
 
