@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import br.com.michellebrito.todoauthentication.R
 import br.com.michellebrito.todoauthentication.databinding.LoginFragmentBinding
@@ -48,9 +49,10 @@ class LoginFragment : Fragment() {
 
     private fun subscribeViewModelEvents() {
         viewModel.loginSuccess.observe(viewLifecycleOwner) { success ->
-            if (success) {
-                Log.i("login success", success.toString())
-            } else setErrorOnEditText()
+            when {
+                success -> findNavController().navigate(R.id.action_loginFragment_to_taskListFragment)
+                else -> setErrorOnEditText()
+            }
         }
 
         viewModel.enableButton.observe(viewLifecycleOwner) { isEnabledForm ->

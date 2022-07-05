@@ -5,4 +5,7 @@
     <string name="login_text">Entrar</string>
     <string name="email_error">Confira se o email está correto</string>
     <string name="password_error">Confira se a senha está correta</string>
+    <string name="card_title_example">Estudar room database</string>
+    <string name="card_description_example">finalizar CRUD com Room database</string>
+    <string name="empty_task_list">Ops! Parece que você ainda não cadastrou nenhuma tarefa!</string>
 </resources>
